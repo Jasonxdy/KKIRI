@@ -28,7 +28,7 @@ input,select,textarea             {border:1px solid #cdd2d8; border-radius: 5px;
 /* 모달창 */
 .popup-shadow{
   background: rgba(0,0,0,0.6);
-  position: absolute;
+  position: fixed;
   top: 0;
   left:0;
   width: 100%;
@@ -119,8 +119,8 @@ input,select,textarea             {border:1px solid #cdd2d8; border-radius: 5px;
 html body .green-radius-btn{
   background: #00a185;
   color: #ffffff;
-  border-radius: 10px;
-  padding: 10px 20px;
+  border-radius: 5px;
+  padding:   20px;
   font-size: 1.1rem;
   margin: 0 10px;
 }
@@ -148,4 +148,14 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* 페이징 형식 통일 */
+.page-link{
+  color:#00a185;
+}
+.page-link:hover{
+  background-color:#00a185;
+  border-color:#00a185;
+  color:#ffffff;
 }
