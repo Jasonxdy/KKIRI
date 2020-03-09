@@ -1,0 +1,44 @@
+#map{
+  background-color: lightgray;
+  width: 100%;
+  height: 500px;
+}
+.ui-helper-hidden-accessible{
+  display:none;
+}
+#ui-id-1{
+  background-color: white;
+  width: 10rem;
+  padding: .5rem;
+}
+#join{
+  width: 6rem; 
+  color: #00a185; 
+  border-radius: 0.25rem; 
+  padding: 0.25rem;
+  border-color: #00a185;
+  border: 1px solid;
+}
+.thumb-wrap{
+  position: relative;
+}
+.thumb{
+  position: absolute;
+  width: 95%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 1199px) {
+  
+}
+@media (max-width: 991px) {
+  .already-finish-event{
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .thumb{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -127,6 +127,7 @@
                     <input type="checkbox" name="memberInterest" value="socialMovement" id="socialMovement"><label for="socialMovement">사회운동</label>
                     <input type="checkbox" name="memberInterest" value="beauty" id="beauty"><label for="beauty">뷰티</label>
                     <input type="checkbox" name="memberInterest" value="fashion" id="fashion"><label for="fashion">패션</label>
+                    <input type="checkbox" name="memberInterest" value="etc" id="etc"><label for="etc">기타</label>
                   </div>
                   <button type="button" class="go-step1 green-radius-btn">1단계로</button>
                   <button type="button" class="go-step3 green-radius-btn">3단계로</button>
@@ -135,7 +136,7 @@
                     <h3 class="signUpTitle">3단계. 회원님의 정보를 입력해주세요.</h3>
                     <p class="sub-title"><strong class='require'>필수</strong>표시는 필수적으로 입력하셔야 합니다.</p>
                     <div class="insert-member-info">
-                      <label for="memberProfile"><strong class='require'>필수</strong>&nbsp;프로필 사진</label>
+                      <label><strong class='require'>필수</strong>&nbsp;프로필 사진</label>
                       <input type="file" class="uploadInput" name="memberProfile" onchange="loadImg(this)">
                       <div class="uploadImgWrap">
                         <img class="uploadImg">

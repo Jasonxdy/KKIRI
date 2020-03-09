@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
@@ -14,40 +14,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/searchEvent.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-
-    <style>
-      #map{
-        background-color: lightgray;
-        height: 50rem;
-      }
-
-      #searchBar{
-      }
-      .ui-helper-hidden-accessible{
-        display:none;
-      }
-
-      #ui-id-1{
-        background-color: white;
-        width: 10rem;
-        padding: .5rem;
-      }
-      #join{
-        width: 6rem; 
-        color: #00a185; 
-        border-radius: 0.25rem; 
-        padding: 0.25rem;
-        /* display: inline-block; */
-        /* margin: 0.1rem; */
-        border-color: #00a185;
-        border: 1px solid;
-      }
-      
-    </style>
-
     <script src='js/index.js'></script>
     <title>KKIRI(끼리)</title>
     </head>
@@ -93,46 +62,26 @@
                 <form>
                   <div class="row p-2">
                       <div class="col-md-3 text-center">
-                        <label class="mt-1 h4" for="">카테고리</label>
-                        <input class="mt-1 p-1" style="width: 7rem; border-radius: 0.25rem;" type="text" type="button" id="category" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <label class="mt-1 h4">카테고리</label>
+                        <input class="form-control mt-1 p-1" autocomplete="off" type="text" id="category" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                         <ul class="dropdown-menu my-1" style="width: 30rem;" id="categoryMenu">
                           <li style="display: inline-block;">
                             <ul>
                               <li>
-                                <a class="dropdown-item" href="#">여행</a>
+                                <a class="dropdown-item" href="javascript:">여행</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">운동</a>
+                                <a class="dropdown-item" href="javascript:">운동</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">독서</a>
+                                <a class="dropdown-item" href="javascript:">독서</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">비즈니스</a>
+                                <a class="dropdown-item" href="javascript:">비즈니스</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">언어</a>
-                              </li>
-                            </ul>
-                          </li>
-
-                          <li style="display: inline-block;">
-                            <ul>
-                              <li>
-                                <a class="dropdown-item" href="#">음악</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">영화/공연</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">댄스</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">봉사활동</a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item" href="#">사교</a>
+                                <a class="dropdown-item" href="javascript:">언어</a>
                               </li>
                             </ul>
                           </li>
@@ -140,19 +89,19 @@
                           <li style="display: inline-block;">
                             <ul>
                               <li>
-                                <a class="dropdown-item" href="#">차/오토바이</a>
+                                <a class="dropdown-item" href="javascript:">음악</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">사진/영상</a>
+                                <a class="dropdown-item" href="javascript:">영화/공연</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">스포츠관람</a>
+                                <a class="dropdown-item" href="javascript:">댄스</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">게임</a>
+                                <a class="dropdown-item" href="javascript:">봉사활동</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">요리</a>
+                                <a class="dropdown-item" href="javascript:">사교</a>
                               </li>
                             </ul>
                           </li>
@@ -160,19 +109,39 @@
                           <li style="display: inline-block;">
                             <ul>
                               <li>
-                                <a class="dropdown-item" href="#">반려동물</a>
+                                <a class="dropdown-item" href="javascript:">차/오토바이</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">사회운동</a>
+                                <a class="dropdown-item" href="javascript:">사진/영상</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">뷰티</a>
+                                <a class="dropdown-item" href="javascript:">스포츠관람</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">패션</a>
+                                <a class="dropdown-item" href="javascript:">게임</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#">기타</a>
+                                <a class="dropdown-item" href="javascript:">요리</a>
+                              </li>
+                            </ul>
+                          </li>
+
+                          <li style="display: inline-block;">
+                            <ul>
+                              <li>
+                                <a class="dropdown-item" href="javascript:">반려동물</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="javascript:">사회운동</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="javascript:">뷰티</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="javascript:">패션</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href="javascript:">기타</a>
                               </li>
                             </ul>
                           </li>
@@ -218,7 +187,7 @@
                       </div>
 
                       <div class="col-md-4 text-center">
-                        <input type="text" class="p-1" style="width: 15rem; border-radius: 0.25rem;" placeholder="제목" name="">
+                        <input type="text" class="p-1 form-control" style="border-radius: 0.25rem;" placeholder="제목" >
                         <button class="btn btn-primary" style="background-color: #00a185; border: none;">검색</button>
                       </div>
                   </div>
@@ -232,10 +201,10 @@
           <div class="container my-5">
 
             <div class="row card shadow my-4">
-              <div class="clo-md-12 h-100">
+              <div class="col-md-12 h-100">
                 <div class="row h-100">
-                  <div class="col-md-3 h-100">
-                    <img class ="p-2 w-100" style="height: 13.2rem;" src="img/banner-alter-img.png" alt="로고">
+                  <div class="col-md-3 thumb-wrap">
+                    <img class ="p-2 thumb" src="img/banner-alter-img.png" alt="로고">
                   </div>
                   <div class="col-md-6 p-3">
                     <p class="mb-1" style="color: darkcyan;">2월 21일 (금), 오후 7:00</p>
@@ -251,12 +220,10 @@
                         <div style="display: inline-block;">
                           <p class="mb-1">주최자 아이디</p>
                           <img style="width: 1rem; height: 1rem;" src="img/star-on.png" alt="">
-                          <span>x 4.5</span>
+                          <span>4.5</span>
                         </div>
                       </div>
-                      <div class="text-center ml-5 shadow" style="background-color: red; border-radius: 0.25em; color: white; margin-top:5rem;">
-                        <h5 class="m-0">종료된 이벤트</h5>
-                      </div>
+                      <p class="already-finish-event float-right" style="margin-top:5rem;">종료된 이벤트</p>
                     </div>
                   </div>
                 </div>
@@ -266,8 +233,8 @@
             <div class="row card shadow my-4">
               <div class="col-md-12 h-100">
                 <div class="row h-100">
-                  <div class="col-md-3 h-100">
-                    <img class ="p-2 w-100" style="height: 13.2rem;" src="img/banner-alter-img.png" alt="로고">
+                  <div class="col-md-3 thumb-wrap">
+                    <img class ="p-2 thumb" src="img/banner-alter-img.png" alt="로고">
                   </div>
                   <div class="col-md-6 p-3">
                     <p class="mb-1" style="color: darkcyan;">2월 21일 (금), 오후 7:00</p>
@@ -283,11 +250,9 @@
                         <div style="display: inline-block;">
                           <p class="mb-1">주최자 아이디</p>
                           <img style="width: 1rem; height: 1rem;" src="img/star-on.png" alt="">
-                          <span>x 4.5</span>
+                          <span>4.5</span>
                         </div>
-                        <div id="join" class="text-center float-right" style="margin-top:5rem;">
-                          티켓 1장
-                        </div>
+                        <p id="join" class="text-center float-right" style="margin-top:5rem;">티켓 1장 </p>
                       </div>
                     </div>
                   </div>
@@ -326,6 +291,7 @@
         <div id="button-top">
           <button type="button" class="top-btn">TOP</button>
         </div>
+      </div>
 
       <script>
 

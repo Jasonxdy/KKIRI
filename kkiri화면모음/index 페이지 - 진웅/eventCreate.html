@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -101,7 +101,7 @@
                   <input class="locationResult locationInput" type="text" name="locationResult" value="서울시 동대문구" readonly>
 
                   <label for="eventLocation">참가자들이 장소를 더 찾기 쉽게 명칭을 적어주세요.(선택사항)</label>
-                  <input type="test" name="eventLocation" class="locationInput" id="eventLocation" placeholder="모이는 장소 입력">
+                  <input type="text" name="eventLocation" class="locationInput" id="eventLocation" placeholder="모이는 장소 입력">
                   
                   <button type="button" class="go-main green-radius-btn" onclick="history.back();">이전으로</button>
                   <button type="button" class="go-step2 green-radius-btn">2단계로</button>
@@ -132,7 +132,7 @@
                     <input type="radio" name="memberInterest" value="socialMovement" id="socialMovement"><label for="socialMovement">사회운동</label>
                     <input type="radio" name="memberInterest" value="beauty" id="beauty"><label for="beauty">뷰티</label>
                     <input type="radio" name="memberInterest" value="fashion" id="fashion"><label for="fashion">패션</label>
-                    <input type="radio" name="memberInterest" value="etc" id="etc"><label for="etc">그 외 기타</label>
+                    <input type="radio" name="memberInterest" value="etc" id="etc"><label for="etc">기타</label>
                   </div>
                   <button type="button" class="go-step1 green-radius-btn">1단계로</button>
                   <button type="button" class="go-step3 green-radius-btn">3단계로</button>
@@ -140,7 +140,7 @@
                 <div class="step3 input-info step">
                     <h3 class="eventCreateTitle">3단계. 이벤트의 상세 정보를 입력해주세요.</h3>
                     <div class="insert-event-info">
-                      <label for="eventProfile">이벤트 썸네일 사진</label>
+                      <label>이벤트 썸네일 사진</label>
                       <input type="file" class="uploadInput" name="eventProfile" onchange="loadImg(this)">
                       <div class="uploadImgWrap">
                         <img class="uploadImg">

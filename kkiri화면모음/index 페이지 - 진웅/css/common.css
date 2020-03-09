@@ -120,7 +120,7 @@ html body .green-radius-btn{
   background: #00a185;
   color: #ffffff;
   border-radius: 5px;
-  padding:   20px;
+  padding: 10px 20px;
   font-size: 1.1rem;
   margin: 0 10px;
 }
@@ -144,8 +144,8 @@ html body .green-radius-btn{
   bottom:5px;
 }
 /* number 태그 화살표 제거 */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
     -webkit-appearance: none;
     margin: 0;
 }
@@ -158,4 +158,23 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color:#00a185;
   border-color:#00a185;
   color:#ffffff;
+}
+
+/* 종료된 이벤트 */
+.already-finish-event{
+  font-size: 17px;
+  background: #888888;
+  text-align: center;
+  padding: 5px 10px;
+  display: inline-block;
+  color: #ffffff;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+/* 폼 포커스 색상통일 */
+.custom-select:focus,
+.form-control:focus{
+  border-color: #00a185;
+  box-shadow: 0 0 0 0.2rem rgba(0,161,133,.25);
 }
