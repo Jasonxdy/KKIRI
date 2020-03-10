@@ -1,0 +1,11 @@
+INDEX VERSION 1.131
+C:\workspace\KKIRI\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2077066421.index
+\kirri\src\main\java
+C:\workspace\KKIRI\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3249390528.index
+\SpringProject\src\main\java
+C:\workspace\KKIRI\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\352451073.index
+\SpringProject\src\main\java
+C:\workspace\KKIRI\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\776338133.index
+\kirri\src\main\java
+C:\workspace\KKIRI\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1710109337.index
+\SpringProject\src\main\java
