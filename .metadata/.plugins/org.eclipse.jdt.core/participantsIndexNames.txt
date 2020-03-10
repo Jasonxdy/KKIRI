@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-C:\workspace\KKIRI\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2306370503.index
-\kkiri\src\main\java
