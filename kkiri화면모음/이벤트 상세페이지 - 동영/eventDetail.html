@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="../index 페이지 - 진웅/css/index.css">
     <link rel="stylesheet" href="../index 페이지 - 진웅/css/header.css">
     <link rel="stylesheet" href="../index 페이지 - 진웅/css/footer.css">
+
+    <!-- 이벤트 상세 페이지 CSS 적용 -->
+    <link rel="stylesheet" href="../index 페이지 - 진웅/css/eventDetail.css">
     <script src='/index 페이지 - 진웅/js/index.js'></script>
     <title>KKIRI(끼리)</title>
 </head>
@@ -60,22 +63,32 @@
             <!-- 이벤트 상세 상단 정보 start -->
             <div class="row">
                 <div class="col-md-7" id="eventDetailDiv">
+                    <!-- 이벤트 시작시간, 끝나는 시간 -->
+                    <p class="text-muted" id="eventDate" name="eventDate" style="margin-bottom: 0em;">
+                        2020년 3월 9일 월요일 15:00 ~ 17:00
+                    </p>
                     <h2 id="eventTitle" name="eventTitle">
                         크로스 핏 모여서 즐겨요
                     </h2>
-                    <!-- 이벤트 시작시간, 끝나는 시간 -->
-                    <p class="text-muted" id="eventDate" name="eventDate">
-                        2020년 3월 9일 월요일 15:00 ~ 17:00
-                    </p>
                     <!-- 위도, 경도로 얻은 주소 -->
-                    <p id="" name="">
+                    <p id="" name="" style="margin-bottom: 0em;">
                         서울시 동대문구 휘경동 204-90
                     </p>
                     <p id="eventLocation" name="eventLocation">
                         회기 크로스핏 짐
                     </p>
+                    <p id="eventTicket" name="eventTicket">
+                        <img src="../index 페이지 - 진웅/img/dollor-icon.png"> <b>2</b> 티켓
+                    </p>
                 </div>
-                <div class="col-md-5" id="event">
+                <div class="col-md-5" id="eventCreater">
+                    <h3>
+                        이벤트 주최자
+                    </h3>
+                    <div>
+                        <img src="../index 페이지 - 진웅/img/profile-ex.png" alt="주최자" class="eventCreater-profile mr-3">
+                        <h5 style="display: inline-block;">jasonxdy</h5>
+                    </div>
                 </div>
             </div>
             <!-- 이벤트 상세 상단 정보 end -->
