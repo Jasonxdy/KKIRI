@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean"
     rel="stylesheet">
   <link rel="stylesheet" href="../index 페이지 - 진웅/css/common.css">
+  <link rel="stylesheet" href="../index 페이지 - 진웅/css/board.css">
   <link rel="stylesheet" href="../index 페이지 - 진웅/css/index.css">
   <link rel="stylesheet" href="../index 페이지 - 진웅/css/header.css">
   <link rel="stylesheet" href="../index 페이지 - 진웅/css/footer.css">
@@ -121,7 +122,7 @@
 
       <div class="row justify-content-md-center">
         <!-- 검색 -->
-        <div class="col-2">
+        <div class="col-md-2 col-sm-3">
           <div class="input-group">
             <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
               <option selected>검색</option>
@@ -130,20 +131,21 @@
             </select>
           </div>
         </div>
-        <div class="col-2">
+        <div class="col-md-9 col-sm-7">
           <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="" aria-label="Username"
               aria-describedby="basic-addon1">
           </div>
         </div>
-        <div class="col-1">
+        <div class="col-md-1 col-sm-2">
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">검색</button>
+            <button class="green-radius-btn search-btn" type="button">검색</button>
           </div>
         </div>
+      </div>
         <!-- 검색 끝 -->
         <!-- 페이징 바 -->
-        <div class="col-2">
+        <div class="row justify-content-center pagination-wrap">
           <ul class="pagination">
             <li>
               <a class="page-link text-success" href="#">&lt;&lt;</a>
@@ -176,9 +178,6 @@
             </li>
           </ul>
         </div>
-        <div class="col-5">
-        </div>
-      </div>
       <!-- 페이징 바 끝 -->
 
     </div>
