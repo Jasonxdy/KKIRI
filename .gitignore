@@ -18,6 +18,8 @@ local.properties
 .loadpath
 .recommenders
 
+
+Servers/kkiri server-config/context.xml
 #Server#
 context.xml
 
