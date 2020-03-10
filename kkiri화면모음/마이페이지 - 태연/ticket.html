@@ -95,6 +95,8 @@
           <div class="btn">티켓</div><br>
           <div class="btn">로그아웃</div><br>
         </div>
+        
+        
         <div id="display-profile" class="col-9 wty3" style="display: block; padding: 0;">
           <div class="row">
             <h4 class="col-3">&nbsp 보유한 티켓 수 : </h4>
@@ -103,7 +105,13 @@
           </div>
           <div class="row">
             <div class="col-5 ">
-              <input type="text">
+              <select name="" id="" style="width: 40%;">
+                <option value="all">전체</option>
+                <option value="">충전</option>
+                <option value="">환급</option>
+                <option value="">사용</option>
+                <option value="">수익</option>
+              </select>
             </div>
           </div>
             
@@ -116,34 +124,56 @@
                         <th width="20%">금액</th>
                     </tr>
                     <tr>
-                        <td width="10%">사용</td>
+                        <td class="sort-of" width="10%">사용</td>
                         <td width="20%">2019.02.21</td>
-                        <td width="10%">-1</td>
+                        <td class="ticket-count" width="10%">-1</td>
                         <td width="40%">파티</td>
-                        <td width="20%"> </td>
+                        <td class="money" width="20%"> </td>
                     </tr>
+                    <tr>
+                        <td class="sort-of" width="10%">수익</td>
+                        <td width="20%">2019.02.21</td>
+                        <td class="ticket-count" width="10%">+1</td>
+                        <td width="40%">파티</td>
+                        <td class="money" width="20%"> </td>
+                    </tr>
+                    <tr>
+                        <td class="sort-of" width="10%">사용</td>
+                        <td width="20%">2019.02.21</td>
+                        <td class="ticket-count" width="10%">-2</td>
+                        <td width="40%">파티</td>
+                        <td class="money" width="20%"> </td>
+                    </tr>
+                    <tr>
+                        <td class="sort-of" width="10%">환급</td>
+                        <td width="20%">2019.02.21</td>
+                        <td class="ticket-count" width="10%">+4</td>
+                        <td width="40%">파티</td>
+                        <td class="money" width="20%"> </td>
+                    </tr>
+                    
                 </table>
             
             
           </div>
-          <div id="supply" class="col-9 wty3" style="display: none; padding: 0;">
+          <div id="supply" class="col-9 wty3" style="display: none; padding: 0; ">
            <h4>티켓 충전</h4>
             <div class="row">
               <div class="col-1 "></div>
               <div class="col-2 btn">
-                  <img src="" alt="천원 충전 사진">
+                  <img src="../index 페이지 - 진웅/img/money-picture-1.jpg" style="width: 90%; height: 75%;" alt="천원 충전 사진" >
                   <br>
                   \1,000
               </div>
               <div class="col-2 "></div>
               <div class="col-2 btn">
-                <img src="" alt="3천원 충전 사진">
+                <img src="../index 페이지 - 진웅/img/money-picture-1.jpg" style="width: 90%; height: 75%;"  alt="3천원 충전 사진">
                 <br>
                 \3,000
               </div>
               <div class="col-2 "></div>
               <div class="col-2 btn">
-                <img src="" alt="5천원 충전 사진">
+                <img src="../index 페이지 - 진웅/img/money-picture-1.jpg" style="width: 90%; height: 75%;"  alt="5천원 충전 사진">
                 <br>
                 \5,000
               </div>
@@ -152,19 +182,19 @@
             <div class="row">
               <div class="col-1 "></div>
               <div class="col-2 btn">
-                  <img src="" alt="만원 충전 사진">
+                  <img src="../index 페이지 - 진웅/img/money-picture-1.jpg" style="width: 90%; height: 75%;"  alt="만원 충전 사진">
                   <br>
                   \10,000
               </div>
               <div class="col-2 "></div>
               <div class="col-2 btn">
-                <img src="" alt="5만원 충전 사진">
+                <img src="../index 페이지 - 진웅/img/money-picture-1.jpg" style="width: 90%; height: 75%;"  alt="5만원 충전 사진">
                 <br>
                 \50,000
               </div>
               <div class="col-2 "></div>
               <div class="col-2 btn">
-                <img src="" alt="10만원 충전 사진">
+                <img src="../index 페이지 - 진웅/img/money-picture-1.jpg" style="width: 90%; height: 75%;"  alt="10만원 충전 사진">
                 <br>
                 \100,000
               </div>
@@ -175,7 +205,7 @@
                   
 
                         <form action="" style="margin-left: 32%;">
-                          <input type="radio" name="how-pay" >  <label for="how-pay">카카오 페이</label> &nbsp;
+                          <input type="radio" name="how-pay"> <label for="how-pay">카카오 페이</label> &nbsp;
                           <input type="radio" name="how-pay"> <label for="how-pay">카드결제</label> &nbsp;
                           <input type="radio" name="how-pay"> <label for="how-pay">휴대폰 결제</label> &nbsp;<br>
                           <button class="wty2" style="width: 15%; margin-left: 18%;">구매</button>
@@ -207,9 +237,10 @@
                     <div> 176067-22-321583</div>
                     <div>농협</div>
                   </div>
-                  <input type="text" placeholder="티켓 수 입력">
-                  <div>
-                    총 9,000원 환급됩니다.
+                  <!-- 소수점 입력 방지 / 문자 입력 방지-->
+                  <input type="text" placeholder="티켓 수 입력" id="payback-input">
+                  <div id="payback-count" placeholder="0,000원이 환급됩니다.">
+                    
                   </div>
                   <div class="btn wty2-1" style="float: right;">환급 신청</div>
                 </div>
@@ -226,7 +257,7 @@
     </div>
     
     <script>
-
+var regExp = /^[\d]{1,7}$/;
       $(function(){
         $("#my-profile").click(function(){
           $(".wty3").css("display","none");
@@ -241,6 +272,36 @@
           $("#payback").css("display","block");
         });
        
+
+// 값에 따라서 해당 블럭 색이 변하는 스크립트 
+        $(".ticket-count").each(function(index){
+       if($(this).html() >= 0){
+         $(this).css("background-color","blue")
+       }else{
+         $(this).css("background-color","red")
+
+       }
+        })
+// 값의 종류에 따라서 해당 블럭 색이 변하는 스크립트 
+        $(".sort-of").each(function(index){
+       if($(this).html() == "환급"||$(this).html()=="수익"){
+         $(this).css("background-color","blue")
+       }else{
+         $(this).css("background-color","red")
+
+       }
+        })
+
+        $("#payback-input").change(function(){
+          if(regExp.test($("#payback-input").val())){
+           var pay= $("#payback-input").val();
+            $("#payback-count").html('총 '+pay+',000원 환급됩니다.').css("color","green");
+          }else{
+            $("#payback-count").html('올바르지 못한 입력값 입니다.').css("color","red");
+          }
+
+        })
+
 
       })
 
