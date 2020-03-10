@@ -4,163 +4,380 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Spring Project</title>
+<!-- <link rel="stylesheet" href="css/index.css"> -->
+<%-- <link rel="stylesheet" href="<%= request.getContextPath() %>/css/index.css"> --%>
+<title>KKIRI(끼리)</title>
 </head>
-<style>
-	*{
-		box-sizing:board-box;
-	}
-	 
-	 .video-film {
-		box-shadow: rgba(0, 7, 15, 0.7) 0 0 0 9999px;
-		z-index: 100;
-	}
-	
-	.video-background {
-		background: #000;
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		z-index: -99;
-	}
-	
-	.video-foreground, .video-background iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
-	}
-
-	@media ( min-aspect-ratio : 16/9) {
-		.video-foreground {
-			height: 300%;
-			top: -100%;
-		}
-	}
-	
-	@media ( max-aspect-ratio : 16/9) {
-		.video-foreground {
-			width: 300%;
-			left: -100%;
-		}
-	}
-	
-	h1 {
-		color: white;
-	}
-	
-	#visual-btn {
-		z-index: 50;
-		color: #fff;
-		font-size: 20px;
-		border: 2px solid #fff;
-		padding: 12px 24px;
-		border-radius: 5px;
-		cursor: pointer;
-		background-color: rgba(0, 0, 0, 0);
-	}
-	
-	#visual-btn:hover {
-		color: #ff6868;
-		font-size: 20px;
-		border: 2px solid #ff6868;
-		padding: 12px 24px;
-		border-radius: 5px;
-		cursor: pointer;
-	}
-	
-	#indexBtn {
-		position: fixed;
-		text-align: center
-	}
-	
-	.btnCenter {
-		position: absolute;
-		top: 60%;
-		left: 48%;
-		margin: -50px 0 0 -50px;
-	}
-	
-	.typeitCenter {
-		margin-top: 18%;
-	}
-</style>
 <body>
-	<p class="type_text typeitCenter" style="text-align:center; color:#d5d4f7; font-size:18pt"></p>
-	
-	<div id="indexBtn" class="btnCenter">
-		<button id="visual-btn" onclick="javascript:location.href='main';">Visit our Site!</button>
-	</div>
-	
-	<div class="video-background">
-		<div class="video-foreground">
-			<div id="muteYouTubeVideoPlayer"></div>
-		</div>
-	</div>
-	
-	<div class="video-film"></div>
-	
-	<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script async src="https://www.youtube.com/iframe_api"></script>
-	<script type="text/javascript">
-		var player;
+	<div id="wrapper">
+		<jsp:include page="WEB-INF/views/common/header.jsp"/>
 		
-		function onYouTubePlayerAPIReady(){
-			player = new YT.Player('muteYouTubeVideoPlayer', {
-				videoId : 's4gBChg6AII',
-				playerVars : {
-					autoplay : 1, 		// Auto-play the video on load
-					controls : 0, 		// Show pause/play buttons in player
-					rel : 0,
-					start : 235,
-					end : 270,
-					showinfo : 0,
-					showinfo : 0, 		// Hide the video title
-					modestbranding : 1, // Hide the Youtube Logo
-					loop : 1, 			// Run the video in a loop
-					playlist : 's4gBChg6AII',
-					fs : 0, 			// Hide the full screen button
-					cc_load_policy : 0, // Hide closed captions
-					iv_load_policy : 3, // Hide the Video Annotations
-					autohide : 1		// Hide video controls when playing
-				},
-				events:{
-					onReady:function(e){
-						e.target.mute();
-					}
-				}
-			});
-		}
-	</script>
-	
-	<script type="text/javascript" src="resources/js/typeit.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			var str1 = ["본 사이트는 KH 정보교육원", "수강생들을 위한 사이트로", "Spring 교육을 위한 사이트입니다."];
-			var str2 = ["누구나 할 수 있는<br>_Spring Framework와<br>_쉬운 웹 개발 노하우<br>_지금 바로 함께 하세요!!"];
-			var str3 = ["Hey, you!!<br>_Don't be hesitate,<br>_Right Now Start!!"];
-			
-			$('.type_text').typeIt({
-				strings:str1,
-				html:true,
-				autoStart:true,
-				loop:true,
-				typeSpeed:100
-			})
-			.tiPause(1500)
-			.tiDelete(130)
-			.tiType(str2)
-			.tiPause(1700)
-			.tiDelete(130)
-			.tiType(str3)
-			.tiPause(1700)
-			.tiEmpty(); 
-		});
-	</script>
-	
+		<div id="container">
+          <!-- 배너 start -->
+          <div id="banner">
+            <div class="banner-text-area">
+              <p class="banner-title">
+                많은 사람들이 끼리를 통해 삶을 공유하고 있습니다.<br>
+                <span class="banner-sub-title">내 주변의 사람들과 좋아하는 일을 함께 하며 새로운 경험을 즐겨 보세요.</span>
+              </p>
+              <a href="#" class="go-sign-up">끼리 가입하기</a>
+            </div>
+    				<video class='video' autoplay loop muted>
+    					<source src='movie/banner-movie.mp4' type='video/mp4'>
+    				</video>
+            <div class="video-shadow"> </div>
+      		</div>
+          <!-- 배너 end -->
+
+          <!-- 이런 이벤트는 어떠세요? start -->
+          <div id="event-recommend">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+
+                  <h3 class="box-title">
+                    이런 이벤트 어떠세요?<br>
+                    <span class="box-sub-title">끼리에 가입하고 이벤트에 참여하세요.</span>
+                  </h3>
+                  <div class="blog-slider">
+                    <div class="blog-slider__wrp swiper-wrapper">
+                      <div class="blog-slider__item swiper-slide on">
+                        <div class="blog-slider__img">
+                          <img src="img/thumbnail1.PNG" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                          <span class="blog-slider__code">2020년 02월 21일 19:00</span>
+                          <div class="blog-slider__title">
+                            <p class="address">[같이 등산가요1]</p>
+                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                          </div>
+                          <div class="blog-slider__text">
+                            <p class="leader">주최자</p>
+                            <div class="content">
+                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <p class="leader-info">
+                                주최자 닉네임<br>
+                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <span class="star-rating">4.2</span>
+                              </p>
+                              <p class="member-count">참석인원 : 4/10</p>
+                            </div>
+                            <p class="ticket">티켓 : 4장</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                          <img src="img/thumbnail2.PNG" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                          <span class="blog-slider__code">2020년 02월 21일 19:00</span>
+                          <div class="blog-slider__title">
+                            <p class="address">[같이 등산가요2]</p>
+                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                          </div>
+                          <div class="blog-slider__text">
+                            <p class="leader">주최자</p>
+                            <div class="content">
+                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <p class="leader-info">
+                                주최자 닉네임<br>
+                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <span class="star-rating">4.2</span>
+                              </p>
+                              <p class="member-count">참석인원 : 4/10</p>
+                            </div>
+                            <p class="ticket">티켓 : 4장</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                          <img src="img/thumbnail3.PNG" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                          <span class="blog-slider__code">2020년 02월 21일 19:00</span>
+                          <div class="blog-slider__title">
+                            <p class="address">[같이 등산가요3]</p>
+                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                          </div>
+                          <div class="blog-slider__text">
+                            <p class="leader">주최자</p>
+                            <div class="content">
+                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <p class="leader-info">
+                                주최자 닉네임<br>
+                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <span class="star-rating">4.2</span>
+                              </p>
+                              <p class="member-count">참석인원 : 4/10</p>
+                            </div>
+                            <p class="ticket">티켓 : 4장</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                          <img src="img/thumbnail1.PNG" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                          <span class="blog-slider__code">2020년 02월 21일 19:00</span>
+                          <div class="blog-slider__title">
+                            <p class="address">[같이 등산가요4]</p>
+                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                          </div>
+                          <div class="blog-slider__text">
+                            <p class="leader">주최자</p>
+                            <div class="content">
+                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <p class="leader-info">
+                                주최자 닉네임<br>
+                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <span class="star-rating">4.2</span>
+                              </p>
+                              <p class="member-count">참석인원 : 4/10</p>
+                            </div>
+                            <p class="ticket">티켓 : 4장</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="blog-slider__item swiper-slide">
+                        <div class="blog-slider__img">
+                          <img src="img/thumbnail2.PNG" alt="">
+                        </div>
+                        <div class="blog-slider__content">
+                          <span class="blog-slider__code">2020년 02월 21일 19:00</span>
+                          <div class="blog-slider__title">
+                            <p class="address">[같이 등산가요5]</p>
+                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                          </div>
+                          <div class="blog-slider__text">
+                            <p class="leader">주최자</p>
+                            <div class="content">
+                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <p class="leader-info">
+                                주최자 닉네임<br>
+                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <span class="star-rating">4.2</span>
+                              </p>
+                              <p class="member-count">참석인원 : 4/10</p>
+                            </div>
+                            <p class="ticket">티켓 : 4장</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog-slider__pagination swiper-pagination-bullets"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 이런 이벤트는 어떠세요? end -->
+
+          <!-- 주최자 랭킹 start -->
+          <div id="ranking">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="box-title">
+                    한주간 가장 높은 평점을 받은 5명을 소개합니다.<br>
+                    <span class="box-sub-title">축하드립니다! 앞으로도 멋진 모임들을 많이 만들어주세요.</span>
+                  </h3>
+                    <div class="ranking-wrap">
+                      <ul class="ranker-list">
+                        <li class="ranker on">
+                          <p class="rank first-rank">1 st</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+
+                        <li class="ranker">
+                          <p class="rank second-rank">2 nd</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+
+                        <li class="ranker">
+                          <p class="rank third-rank">3 rd</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+
+                        <li class="ranker">
+                          <p class="rank least-rank">4 th</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+
+                        <li class="ranker">
+                          <p class="rank least-rank">5 th</p>
+                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <p class="nickname">주최자 닉네임 1</p>
+                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                        </li>
+                      </ul>
+                      <!-- <a href="javascript:" class="prev-link btn-link"><img src="img/arrow-prev.png" alt="이전"></a>
+                      <a href="javascript:" class="next-link btn-link"><img src="img/arrow-next.png" alt="다음"></a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- 주최자 랭킹 end -->
+
+          <!-- 카테고리 추천 start -->
+          <div id="category-list">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 class="box-title">
+                    카테고리<br>
+                    <span class="box-sub-title">관심있는 주제별로 이벤트를 찾아보세요.</span>
+                  </h3>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/travel-icon.png" alt=""></div>
+                        <span class="category-name">여행</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <span class="category-name">운동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/book-icon.png" alt=""></div>
+                        <span class="category-name">독서</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/business-icon.png" alt=""></div>
+                        <span class="category-name">비즈니스</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/language-icon.png" alt=""></div>
+                        <span class="category-name">언어</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/music-icon.png" alt=""></div>
+                        <span class="category-name">음악</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/cinema-icon.png" alt=""></div>
+                        <span class="category-name">영화/공연</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/dance-icon.png" alt=""></div>
+                        <span class="category-name">댄스</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/volunteer-icon.png" alt=""></div>
+                        <span class="category-name">봉사활동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/friend-icon.png" alt=""></div>
+                        <span class="category-name">사교</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/car-icon.png" alt=""></div>
+                        <span class="category-name">차/오토바이</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/camera-icon.png" alt=""></div>
+                        <span class="category-name">사진/영상</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/stadium-icon.png" alt=""></div>
+                        <span class="category-name">스포츠관람</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/game-icon.png" alt=""></div>
+                        <span class="category-name">게임</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/cook-icon.png" alt=""></div>
+                        <span class="category-name">요리</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/pet-icon.png" alt=""></div>
+                        <span class="category-name">반려동물</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="category-ul">
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/socialMovement-icon.png" alt=""></div>
+                        <span class="category-name">사회운동</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/beauty-icon.png" alt=""></div>
+                        <span class="category-name">뷰티</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/fashion-icon.png" alt=""></div>
+                        <span class="category-name">패션</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <div class="blue-background"><img src="img/etc-icon.png" alt=""></div>
+                        <span class="category-name">기타</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 카테고리 추천 end -->
+        </div>
+		
+		<jsp:include page="WEB-INF/views/common/footer.jsp"/>
+	</div>
 </body>
 </html>
