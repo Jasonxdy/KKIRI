@@ -56,13 +56,13 @@
 
           <!-- 검색창 start -->
           <div id="searchBar" class="container" style="color:white; display: flex; justify-content: center;">
-            <div class="row my-3 card shadow" style="background-color: #55595c; width: 90%; left: 0; right: 0; ">
+            <div class="row my-3 card shadow" style="background-color: #272e37; width:100%;">
               <div class="col-md-12">
 
                 <form>
                   <div class="row p-2">
-                      <div class="col-md-3 text-center">
-                        <label class="mt-1 h4">카테고리</label>
+                      <div class="col-md-3">
+                        <label class="mt-1 h4 event-section-title">카테고리</label>
                         <input class="form-control mt-1 p-1" autocomplete="off" type="text" id="category" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                         <ul class="dropdown-menu my-1" style="width: 30rem;" id="categoryMenu">
@@ -148,26 +148,26 @@
                         </ul>
                       </div>
           
-                      <div class="col-md-5 mt-1">
+                      <div class="col-md-4 mt-1 event-location">
                         <div class="dropdown" style="display: inline-block;">
                           <div class="mr-3">
-                            <span class="h4">반경</span>
-                            <a class="h4" style="color: white; text-decoration: underline;" data-toggle="dropdown" href="#" id="round">5 km</a>
+                            <span class="h4 event-section-title">반경</span>
+                            <a class="h4 event-section-title" style="color: white; text-decoration: underline;" data-toggle="dropdown" href="#" id="round">5 km</a>
                             <ul class="dropdown-menu my-1" id="roundMenu">
                               <li>
-                                <a class="dropdown-item" href="#" data-value="1" data-copy="5 km">5 km</a>
+                                <a class="dropdown-item" href="javascript:" data-value="1" data-copy="5 km">5 km</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#" data-value="2" data-copy="10 km">10 km</a>
+                                <a class="dropdown-item" href="javascript:" data-value="2" data-copy="10 km">10 km</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#" data-value="3" data-copy="25 km">25 km</a>
+                                <a class="dropdown-item" href="javascript:" data-value="3" data-copy="25 km">25 km</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#" data-value="4" data-copy="50 km">50 km</a>
+                                <a class="dropdown-item" href="javascript:" data-value="4" data-copy="50 km">50 km</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href="#" data-value="5" data-copy="100 km">100 km</a>
+                                <a class="dropdown-item" href="javascript:" data-value="5" data-copy="100 km">100 km</a>
                               </li>
                             </ul>
                           </div>
@@ -175,20 +175,20 @@
                         
                         <div class="dropdown mr-1" style="display: inline-block;">
                           <div>
-                            <span class="h4">지역</span>
-                            <a class="h4" style="color: white; text-decoration: underline;" data-toggle="dropdown" href="#" id="place">서울특별시</a>
+                            <span class="h4 event-section-title">지역</span>
+                            <a class="h4 event-section-title" style="color: white; text-decoration: underline;" data-toggle="dropdown" href="#" id="place">서울특별시</a>
 
-                            <div class="dropdown-menu">
+                            <div class="dropdown-menu find-city-wrap">
                               <!-- <label for="city">도시: </label> -->
-                              <input id="city">
+                              <input id="city" class="form-control">
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      <div class="col-md-4 text-center">
-                        <input type="text" class="p-1 form-control" style="border-radius: 0.25rem;" placeholder="제목" >
-                        <button class="btn btn-primary" style="background-color: #00a185; border: none;">검색</button>
+                      <div class="col-md-5 text-center findEventTitleWrap">
+                        <input type="text" class="p-1 form-control eventTItleInput" style="border-radius: 0.25rem;" placeholder="제목" >
+                        <button class="btn btn-primary " style="background-color: #00a185; border: none;">검색</button>
                       </div>
                   </div>
                 </form>

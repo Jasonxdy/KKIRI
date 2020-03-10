@@ -18,6 +18,27 @@ html body .search-btn{
   margin-top :50px;
   text-align: center;
 }
+p.board-title-td{
+  margin-bottom:0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+@media (max-width: 991px){
+  .admin-table-td{
+    width: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}
+@media (max-width: 767px){
+  p.board-title-td{
+    width: 230px;
+  }
+}
 @media (max-width: 575px) {
   .inputSection{
     margin-top:10px;
@@ -27,5 +48,10 @@ html body .search-btn{
   }
   .input-group-append{
     float: right;
+  }
+  @media (max-width: 534px){
+    p.board-title-td{
+      width:95px;
+    }
   }
 }
