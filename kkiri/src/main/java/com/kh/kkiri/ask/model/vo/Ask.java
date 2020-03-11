@@ -7,4 +7,8 @@ public class Ask {
 	private String askEmail;
 	private String answerStatus;
 	private String askAnswer;
+	
+	public Ask() {
+		// TODO Auto-generated constructor stub
+	}
 }
