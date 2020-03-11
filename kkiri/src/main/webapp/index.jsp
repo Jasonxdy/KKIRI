@@ -1,17 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
-<!-- <link rel="stylesheet" href="css/index.css"> -->
-<%-- <link rel="stylesheet" href="<%= request.getContextPath() %>/css/index.css"> --%>
+
 <title>KKIRI(끼리)</title>
 </head>
 <body>
 	<div id="wrapper">
 		<jsp:include page="WEB-INF/views/common/header.jsp"/>
-		
+		<script src="<%=request.getContextPath() %>/resources/js/index.js"></script>
 		<div id="container">
           <!-- 배너 start -->
           <div id="banner">
@@ -23,7 +22,7 @@
               <a href="#" class="go-sign-up">끼리 가입하기</a>
             </div>
     				<video class='video' autoplay loop muted>
-    					<source src='movie/banner-movie.mp4' type='video/mp4'>
+    					<source src='<%=request.getContextPath() %>/resources/movie/banner-movie.mp4' type='video/mp4'>
     				</video>
             <div class="video-shadow"> </div>
       		</div>
@@ -43,21 +42,21 @@
                     <div class="blog-slider__wrp swiper-wrapper">
                       <div class="blog-slider__item swiper-slide on">
                         <div class="blog-slider__img">
-                          <img src="img/thumbnail1.PNG" alt="">
+                          <img src="<%=request.getContextPath() %>/resources/img/thumbnail1.PNG" alt="">
                         </div>
                         <div class="blog-slider__content">
                           <span class="blog-slider__code">2020년 02월 21일 19:00</span>
                           <div class="blog-slider__title">
                             <p class="address">[같이 등산가요1]</p>
-                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                            <p class="location"><img src="<%=request.getContextPath() %>/resources/img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
                           </div>
                           <div class="blog-slider__text">
                             <p class="leader">주최자</p>
                             <div class="content">
-                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="프로필" class="profile-img">
                               <p class="leader-info">
                                 주최자 닉네임<br>
-                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">
                                 <span class="star-rating">4.2</span>
                               </p>
                               <p class="member-count">참석인원 : 4/10</p>
@@ -68,21 +67,21 @@
                       </div>
                       <div class="blog-slider__item swiper-slide">
                         <div class="blog-slider__img">
-                          <img src="img/thumbnail2.PNG" alt="">
+                          <img src="<%=request.getContextPath() %>/resources/img/thumbnail2.PNG" alt="">
                         </div>
                         <div class="blog-slider__content">
                           <span class="blog-slider__code">2020년 02월 21일 19:00</span>
                           <div class="blog-slider__title">
                             <p class="address">[같이 등산가요2]</p>
-                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                            <p class="location"><img src="<%=request.getContextPath() %>/resources/img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
                           </div>
                           <div class="blog-slider__text">
                             <p class="leader">주최자</p>
                             <div class="content">
-                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="프로필" class="profile-img">
                               <p class="leader-info">
                                 주최자 닉네임<br>
-                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">
                                 <span class="star-rating">4.2</span>
                               </p>
                               <p class="member-count">참석인원 : 4/10</p>
@@ -93,21 +92,21 @@
                       </div>
                       <div class="blog-slider__item swiper-slide">
                         <div class="blog-slider__img">
-                          <img src="img/thumbnail3.PNG" alt="">
+                          <img src="<%=request.getContextPath() %>/resources/img/thumbnail3.PNG" alt="">
                         </div>
                         <div class="blog-slider__content">
                           <span class="blog-slider__code">2020년 02월 21일 19:00</span>
                           <div class="blog-slider__title">
                             <p class="address">[같이 등산가요3]</p>
-                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                            <p class="location"><img src="<%=request.getContextPath() %>/resources/img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
                           </div>
                           <div class="blog-slider__text">
                             <p class="leader">주최자</p>
                             <div class="content">
-                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="프로필" class="profile-img">
                               <p class="leader-info">
                                 주최자 닉네임<br>
-                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">
                                 <span class="star-rating">4.2</span>
                               </p>
                               <p class="member-count">참석인원 : 4/10</p>
@@ -118,21 +117,21 @@
                       </div>
                       <div class="blog-slider__item swiper-slide">
                         <div class="blog-slider__img">
-                          <img src="img/thumbnail1.PNG" alt="">
+                          <img src="<%=request.getContextPath() %>/resources/img/thumbnail1.PNG" alt="">
                         </div>
                         <div class="blog-slider__content">
                           <span class="blog-slider__code">2020년 02월 21일 19:00</span>
                           <div class="blog-slider__title">
                             <p class="address">[같이 등산가요4]</p>
-                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                            <p class="location"><img src="<%=request.getContextPath() %>/resources/img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
                           </div>
                           <div class="blog-slider__text">
                             <p class="leader">주최자</p>
                             <div class="content">
-                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="프로필" class="profile-img">
                               <p class="leader-info">
                                 주최자 닉네임<br>
-                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">
                                 <span class="star-rating">4.2</span>
                               </p>
                               <p class="member-count">참석인원 : 4/10</p>
@@ -143,21 +142,21 @@
                       </div>
                       <div class="blog-slider__item swiper-slide">
                         <div class="blog-slider__img">
-                          <img src="img/thumbnail2.PNG" alt="">
+                          <img src="<%=request.getContextPath() %>/resources/img/thumbnail2.PNG" alt="">
                         </div>
                         <div class="blog-slider__content">
                           <span class="blog-slider__code">2020년 02월 21일 19:00</span>
                           <div class="blog-slider__title">
                             <p class="address">[같이 등산가요5]</p>
-                            <p class="location"><img src="img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
+                            <p class="location"><img src="<%=request.getContextPath() %>/resources/img/map-ping.png" alt="위치"> &nbsp;서울시 중구 다산로</p>
                           </div>
                           <div class="blog-slider__text">
                             <p class="leader">주최자</p>
                             <div class="content">
-                              <img src="img/profile-ex.png" alt="프로필" class="profile-img">
+                              <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="프로필" class="profile-img">
                               <p class="leader-info">
                                 주최자 닉네임<br>
-                                <img src="img/star-on.png" alt="별점" class="star-img">
+                                <img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">
                                 <span class="star-rating">4.2</span>
                               </p>
                               <p class="member-count">참석인원 : 4/10</p>
@@ -189,41 +188,39 @@
                       <ul class="ranker-list">
                         <li class="ranker on">
                           <p class="rank first-rank">1 st</p>
-                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="회원 썸네일">
                           <p class="nickname">주최자 닉네임 1</p>
-                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                          <p class="star-rating"><img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
                         </li>
 
                         <li class="ranker">
                           <p class="rank second-rank">2 nd</p>
-                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="회원 썸네일">
                           <p class="nickname">주최자 닉네임 1</p>
-                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                          <p class="star-rating"><img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
                         </li>
 
                         <li class="ranker">
                           <p class="rank third-rank">3 rd</p>
-                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="회원 썸네일">
                           <p class="nickname">주최자 닉네임 1</p>
-                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                          <p class="star-rating"><img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
                         </li>
 
                         <li class="ranker">
                           <p class="rank least-rank">4 th</p>
-                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="회원 썸네일">
                           <p class="nickname">주최자 닉네임 1</p>
-                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                          <p class="star-rating"><img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
                         </li>
 
                         <li class="ranker">
                           <p class="rank least-rank">5 th</p>
-                          <img src="img/profile-ex.png" alt="회원 썸네일">
+                          <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="회원 썸네일">
                           <p class="nickname">주최자 닉네임 1</p>
-                          <p class="star-rating"><img src="img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
+                          <p class="star-rating"><img src="<%=request.getContextPath() %>/resources/img/star-on.png" alt="별점" class="star-img">&nbsp; 4.9</p>
                         </li>
                       </ul>
-                      <!-- <a href="javascript:" class="prev-link btn-link"><img src="img/arrow-prev.png" alt="이전"></a>
-                      <a href="javascript:" class="next-link btn-link"><img src="img/arrow-next.png" alt="다음"></a> -->
                     </div>
                   </div>
                 </div>
@@ -243,25 +240,25 @@
                   <ul class="category-ul">
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/travel-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/travel-icon.png" alt=""></div>
                         <span class="category-name">여행</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/exercise-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/exercise-icon.png" alt=""></div>
                         <span class="category-name">운동</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/book-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/book-icon.png" alt=""></div>
                         <span class="category-name">독서</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/business-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/business-icon.png" alt=""></div>
                         <span class="category-name">비즈니스</span>
                       </a>
                     </li>
@@ -269,25 +266,25 @@
                   <ul class="category-ul">
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/language-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/language-icon.png" alt=""></div>
                         <span class="category-name">언어</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/music-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/music-icon.png" alt=""></div>
                         <span class="category-name">음악</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/cinema-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/cinema-icon.png" alt=""></div>
                         <span class="category-name">영화/공연</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/dance-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/dance-icon.png" alt=""></div>
                         <span class="category-name">댄스</span>
                       </a>
                     </li>
@@ -295,25 +292,25 @@
                   <ul class="category-ul">
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/volunteer-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/volunteer-icon.png" alt=""></div>
                         <span class="category-name">봉사활동</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/friend-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/friend-icon.png" alt=""></div>
                         <span class="category-name">사교</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/car-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/car-icon.png" alt=""></div>
                         <span class="category-name">차/오토바이</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/camera-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/camera-icon.png" alt=""></div>
                         <span class="category-name">사진/영상</span>
                       </a>
                     </li>
@@ -321,25 +318,25 @@
                   <ul class="category-ul">
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/stadium-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/stadium-icon.png" alt=""></div>
                         <span class="category-name">스포츠관람</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/game-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/game-icon.png" alt=""></div>
                         <span class="category-name">게임</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/cook-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/cook-icon.png" alt=""></div>
                         <span class="category-name">요리</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/pet-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/pet-icon.png" alt=""></div>
                         <span class="category-name">반려동물</span>
                       </a>
                     </li>
@@ -347,25 +344,25 @@
                   <ul class="category-ul">
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/socialMovement-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/socialMovement-icon.png" alt=""></div>
                         <span class="category-name">사회운동</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/beauty-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/beauty-icon.png" alt=""></div>
                         <span class="category-name">뷰티</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/fashion-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/fashion-icon.png" alt=""></div>
                         <span class="category-name">패션</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <div class="blue-background"><img src="img/etc-icon.png" alt=""></div>
+                        <div class="blue-background"><img src="<%=request.getContextPath() %>/resources/img/etc-icon.png" alt=""></div>
                         <span class="category-name">기타</span>
                       </a>
                     </li>
@@ -378,6 +375,6 @@
         </div>
 		
 		<jsp:include page="WEB-INF/views/common/footer.jsp"/>
-	</div>
+	
 </body>
 </html>

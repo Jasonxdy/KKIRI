@@ -4,31 +4,25 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
-
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
-
-    
-    <%-- <link rel="stylesheet" href="<%= request.getContextPath() %>/WEB-INF/css/common.css"> --%>
-    <%-- <link rel="stylesheet" href="<%= request.getContextPath() %>/css/common.css"> --%>
-    <!-- <link rel="stylesheet" href="css/common.css"> -->
-    <!-- <link rel="stylesheet" href="css/header.css"> -->
-    <!-- <script src='js/index.js'></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/common.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/header.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/common.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/index.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/header.css">
 </head>
 <body>
 	<div id="header">
           <div class="container">
           	<div class="row">
           		<div class="col-md-12">
-                <h1 class="logo"><a href="#"><img src="img/logo.png" alt="로고"></a></h1>
+                <h1 class="logo"><a href="#"><img src="<%=request.getContextPath() %>/resources/img/logo.png" alt="로고"></a></h1>
                 <div class="nav-section">
                   <!-- <a href="#" class="login-btn">로그인</a>
                   <a href="signUp.html">회원가입</a> -->
@@ -37,7 +31,7 @@
                   <a href="#">탐색</a>
                   <a href="#">고객센터</a>
                   <div class="profile-wrap">
-                    <img src="img/profile-ex.png" alt="프로필" class="profile-icon">
+                    <img src="<%=request.getContextPath() %>/resources/img/profile-ex.png" alt="프로필" class="profile-icon">
                     <ul class="profile-menu">
                       <li><a href="#">프로필</a></li>
                       <li><a href="#">이벤트</a></li>
@@ -67,7 +61,7 @@
         <div id="login-popup" class="popup">
           <p class="popup-title">
             로그인
-            <img src="img/close-btn.png" alt="닫기버튼" class="close-popup">
+            <img src="<%=request.getContextPath() %>/resources/img/close-btn.png" alt="닫기버튼" class="close-popup">
           </p>
           <div class="popup-content">
             <p class="sign-up-title">아직 회원이 아니신가요?&nbsp;<a href="signUp.html" class="link sign-up-link">회원가입</a></p>
@@ -101,10 +95,10 @@
           }
         });
       </script>
-    <!-- 
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 	<script	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	-->
+	
 </body>
 </html>
